@@ -14,7 +14,48 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@rm-monorepo/auth-data-access": ["libs/auth/data-access/src/index.ts"],
+      "@rm-monorepo/auth-feature": ["libs/auth/feature/src/index.ts"],
+      "@rm-monorepo/auth-shell": ["libs/auth/shell/src/index.ts"],
+      "@rm-monorepo/auth-ui": ["libs/auth/ui/src/index.ts"],
+      "@rm-monorepo/auth-util": ["libs/auth/util/src/index.ts"],
+      "@rm-monorepo/character-detail-data-access": [
+        "libs/character-detail/data-access/src/index.ts"
+      ],
+      "@rm-monorepo/character-detail-feature": [
+        "libs/character-detail/feature/src/index.ts"
+      ],
+      "@rm-monorepo/character-detail-shell": [
+        "libs/character-detail/shell/src/index.ts"
+      ],
+      "@rm-monorepo/character-detail-ui": [
+        "libs/character-detail/ui/src/index.ts"
+      ],
+      "@rm-monorepo/character-detail-util": [
+        "libs/character-detail/util/src/index.ts"
+      ],
+      "@rm-monorepo/characters-list-data-access": [
+        "libs/characters-list/data-access/src/index.ts"
+      ],
+      "@rm-monorepo/characters-list-feature": [
+        "libs/characters-list/feature/src/index.ts"
+      ],
+      "@rm-monorepo/characters-list-shell": [
+        "libs/characters-list/shell/src/index.ts"
+      ],
+      "@rm-monorepo/characters-list-ui": [
+        "libs/characters-list/ui/src/index.ts"
+      ],
+      "@rm-monorepo/characters-list-util": [
+        "libs/characters-list/util/src/index.ts"
+      ],
+      "@rm-monorepo/shared-data-access": [
+        "libs/shared/data-access/src/index.ts"
+      ],
+      "@rm-monorepo/shared-ui": ["libs/shared/ui/src/index.ts"],
+      "@rm-monorepo/shared-util": ["libs/shared/util/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
