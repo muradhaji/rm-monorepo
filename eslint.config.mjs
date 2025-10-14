@@ -51,6 +51,24 @@ export default [
     },
   },
   {
+    files: ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts'],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.base.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+    rules: {
+      '@typescript-eslint/prefer-readonly': 'warn',
+      '@typescript-eslint/member-ordering': [
+        'warn',
+        {
+          default: ['signature', 'field', 'constructor', 'method'],
+        },
+      ],
+    },
+  },
+  {
     files: [
       '**/*.ts',
       '**/*.tsx',
@@ -61,7 +79,9 @@ export default [
       '**/*.cjs',
       '**/*.mjs',
     ],
-    // Override or add rules here
-    rules: {},
+    rules: {
+      'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
+      eqeqeq: ['error', 'always'],
+    },
   },
 ];
