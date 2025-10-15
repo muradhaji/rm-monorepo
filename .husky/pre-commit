@@ -1,0 +1,10 @@
+#!/bin/sh
+. "$(dirname "$0")/\_/husky.sh"
+
+# Lint staged files and check formatting
+
+npx lint-staged
+
+# Run unit tests for affected projects
+
+npx nx affected:test --plain
