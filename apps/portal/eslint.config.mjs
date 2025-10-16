@@ -28,7 +28,22 @@ export default [
   },
   {
     files: ['**/*.html'],
-    // Override or add rules here
-    rules: {},
+    rules: {
+      '@angular-eslint/template/prefer-control-flow': 'warn',
+      '@angular-eslint/template/attributes-order': [
+        'error',
+        {
+          alphabetical: false,
+          order: [
+            'STRUCTURAL_DIRECTIVE',
+            'TEMPLATE_REFERENCE',
+            'INPUT_BINDING',
+            'OUTPUT_BINDING',
+            'TWO_WAY_BINDING',
+            'ATTRIBUTE_BINDING',
+          ],
+        },
+      ],
+    },
   },
 ];
