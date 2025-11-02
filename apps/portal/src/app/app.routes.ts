@@ -1,19 +1,34 @@
 import { Route } from '@angular/router';
+import { AppAuthRoutes, AppRoutes } from '@rm-monorepo/shared-util';
 
 export const appRoutes: Route[] = [
   {
-    path: '',
+    path: AppRoutes.ROOT,
     pathMatch: 'full',
-    redirectTo: 'characters',
+    redirectTo: AppRoutes.CHARACTERS,
   },
   {
-    path: 'login',
-    pathMatch: 'full',
-    loadComponent: () =>
-      import('@rm-monorepo/auth-shell').then(m => m.AuthShell),
+    path: AppRoutes.AUTH,
+    children: [
+      {
+        path: AppAuthRoutes.LOGIN,
+        loadComponent: () =>
+          import('@rm-monorepo/auth-shell').then(m => m.AuthShell),
+      },
+      {
+        path: AppAuthRoutes.REGISTER,
+        loadComponent: () =>
+          import('@rm-monorepo/auth-shell').then(m => m.AuthShell),
+      },
+      {
+        path: AppAuthRoutes.RESET_PASSWORD,
+        loadComponent: () =>
+          import('@rm-monorepo/auth-shell').then(m => m.AuthShell),
+      },
+    ],
   },
   {
-    path: 'characters',
+    path: AppRoutes.CHARACTERS,
     pathMatch: 'full',
     //TODO: Add AuthGuard and ListResolver
     loadComponent: () =>
@@ -22,7 +37,7 @@ export const appRoutes: Route[] = [
       ),
   },
   {
-    path: 'characters/:id',
+    path: AppRoutes.CHARACTER_DETAIL,
     pathMatch: 'full',
     //TODO: Add AuthGuard and DetailResolver
     loadComponent: () =>
@@ -31,7 +46,7 @@ export const appRoutes: Route[] = [
       ),
   },
   {
-    path: '**',
+    path: AppRoutes.NOT_FOUND,
     //TODO: Add a 404 Not Found Component
     loadComponent: () => import('@rm-monorepo/shared-ui').then(m => m.SharedUi),
   },

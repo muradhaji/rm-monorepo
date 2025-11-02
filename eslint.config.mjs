@@ -19,7 +19,7 @@ export default [
           depConstraints: [
             {
               sourceTag: 'scope:portal',
-              onlyDependOnLibsWithTags: ['type:shell', 'type:ui'],
+              onlyDependOnLibsWithTags: ['type:shell', 'type:ui', 'type:util'],
             },
             {
               sourceTag: 'type:shell',
