@@ -2,13 +2,13 @@
 
 ## 1. Pages Overview
 
-| Route             | Description                                  | Guard(s)  | Resolver(s)    | Feature Module             |
-| ----------------- | -------------------------------------------- | --------- | -------------- | -------------------------- |
-| `/login`          | Fake sign-in page (stores token + role)      | None      | None           | `auth-feature`             |
-| `/characters`     | Characters list (pagination, search by name) | AuthGuard | ListResolver   | `characters-list-feature`  |
-| `/characters/:id` | Character details + related episodes         | AuthGuard | DetailResolver | `character-detail-feature` |
-| `/`               | Redirects to `/characters`                   | AuthGuard | None           | `characters-list-feature`  |
-| `/**`             | Not Found page                               | None      | None           | `shared/ui`                |
+| Route            | Description                                  | Guard(s)  | Resolver(s)    | Feature Module             |
+| ---------------- | -------------------------------------------- | --------- | -------------- | -------------------------- |
+| `/login`         | Fake sign-in page (stores token + role)      | None      | None           | `auth-feature`             |
+| `/characters`    | Characters list (pagination, search by name) | AuthGuard | ListResolver   | `characters-list-feature`  |
+| `/character/:id` | Character details + related episodes         | AuthGuard | DetailResolver | `character-detail-feature` |
+| `/`              | Redirects to `/characters`                   | AuthGuard | None           | `characters-list-feature`  |
+| `/**`            | Not Found page                               | None      | None           | `shared/ui`                |
 
 ## 2. UI Kit Selection
 

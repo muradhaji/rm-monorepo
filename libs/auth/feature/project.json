@@ -4,7 +4,7 @@
   "sourceRoot": "libs/auth/feature/src",
   "prefix": "lib",
   "projectType": "library",
-  "tags": ["feature"],
+  "tags": ["type:feature"],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",

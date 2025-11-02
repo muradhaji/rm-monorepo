@@ -18,6 +18,10 @@ export default [
           allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?[jt]s$'],
           depConstraints: [
             {
+              sourceTag: 'scope:portal',
+              onlyDependOnLibsWithTags: ['type:shell', 'type:ui', 'type:util'],
+            },
+            {
               sourceTag: 'type:shell',
               onlyDependOnLibsWithTags: [
                 'type:feature',
