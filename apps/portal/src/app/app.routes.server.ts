@@ -3,11 +3,11 @@ import { AppRoutes } from '@rm-monorepo/shared-util';
 
 export const serverRoutes: ServerRoute[] = [
   {
-    path: AppRoutes.NOT_FOUND,
+    path: AppRoutes.NotFound,
     renderMode: RenderMode.Prerender,
   },
   {
-    path: AppRoutes.CHARACTER_DETAIL,
+    path: AppRoutes.CharacterDetail,
     renderMode: RenderMode.Server,
   },
 ];

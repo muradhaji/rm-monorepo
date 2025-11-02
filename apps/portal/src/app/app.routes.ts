@@ -3,32 +3,32 @@ import { AppAuthRoutes, AppRoutes } from '@rm-monorepo/shared-util';
 
 export const appRoutes: Route[] = [
   {
-    path: AppRoutes.ROOT,
+    path: AppRoutes.Root,
     pathMatch: 'full',
-    redirectTo: AppRoutes.CHARACTERS,
+    redirectTo: AppRoutes.Characters,
   },
   {
-    path: AppRoutes.AUTH,
+    path: AppRoutes.Auth,
     children: [
       {
-        path: AppAuthRoutes.LOGIN,
+        path: AppAuthRoutes.Login,
         loadComponent: () =>
           import('@rm-monorepo/auth-shell').then(m => m.AuthShell),
       },
       {
-        path: AppAuthRoutes.REGISTER,
+        path: AppAuthRoutes.Register,
         loadComponent: () =>
           import('@rm-monorepo/auth-shell').then(m => m.AuthShell),
       },
       {
-        path: AppAuthRoutes.RESET_PASSWORD,
+        path: AppAuthRoutes.ResetPassword,
         loadComponent: () =>
           import('@rm-monorepo/auth-shell').then(m => m.AuthShell),
       },
     ],
   },
   {
-    path: AppRoutes.CHARACTERS,
+    path: AppRoutes.Characters,
     pathMatch: 'full',
     //TODO: Add AuthGuard and ListResolver
     loadComponent: () =>
@@ -37,7 +37,7 @@ export const appRoutes: Route[] = [
       ),
   },
   {
-    path: AppRoutes.CHARACTER_DETAIL,
+    path: AppRoutes.CharacterDetail,
     pathMatch: 'full',
     //TODO: Add AuthGuard and DetailResolver
     loadComponent: () =>
@@ -46,7 +46,7 @@ export const appRoutes: Route[] = [
       ),
   },
   {
-    path: AppRoutes.NOT_FOUND,
+    path: AppRoutes.NotFound,
     //TODO: Add a 404 Not Found Component
     loadComponent: () => import('@rm-monorepo/shared-ui').then(m => m.SharedUi),
   },
